@@ -13,13 +13,13 @@ A Discord bot facilitating anonymous messages.
 2. Install [node.js](https://nodejs.org/en/download) on your computer.
 3. Open a terminal window in the folder where you put the source, and type the following command:
 
-            npm install
+       npm install
 4. [Go here](https://discordapp.com/developers/applications/me) and create a new Bot User.
 5. Duplicate `config.tmp.ini` and rename the duplicate `config.ini`.
 6. Open `config.ini` and paste your token, as well as the IDs for any mods you'd like to have.
 7. In terminal, type the following:
 
-        node .
+       node .
 
 You're done! In this mode, the bot will go offline as soon as you close that terminal window. See the next section for a workaround.
 
@@ -30,18 +30,18 @@ You're done! In this mode, the bot will go offline as soon as you close that ter
 - The way node functions automatically, you can't have programs running in the background very easily. Fortunately, there are ways around this. Below is my favorite.
   1. Open terminal in the source folder, and type the following command:
 
-            npm install -g pm2
+         npm install -g pm2
   2. Make sure you're still in the folder, and that you aren't running the bot in another window. Then, run the following command:
 
-            pm2 start index.js --name="anonbot"
+         pm2 start index.js --name="anonbot"
         Unfortunately, you'll still have to run this every time your computer restarts. There is a way around this as well, but it's a little in-depth for this. [Click here](http://npm.im/pm2-windows-startup) for more info.
   3. The bot should now be running in the background. Here are a few useful commands now that you know that:
 
 To view the bot logs:
 
-            pm2 logs anonbot
+    pm2 logs anonbot
 To restart the bot:
 
-            pm2 restart anonbot
+    pm2 restart anonbot
 
 [Questions, requests, or problems?](https://github.com/hingobway/anonbot/issues/new)
