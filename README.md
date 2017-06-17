@@ -7,6 +7,14 @@ A Discord bot facilitating anonymous messages.
 2. Users either paste the target from the server message, or follow the instructions in their DMs to set one themselves.
 3. Users type messages in their DM with anonbot, and anonbot posts those messages anonymously in the target channel.
 
+## Admins
+Anonbot has no visible logs of messages and authors--it's anonymous. But, there is a way to keep people on track. Here's what to do if you see an anonbot message that's problematic (you have to be listed as an anonbot mod in the config.ini file first):
+
+1. Make sure you have [developer mode enabled](https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode).
+2. Right click the problematic message, and click "Copy ID".
+3. In your anonbot DMs, type `blist [the user's ID]`. (Don't include brackets.)
+4. It will say who got banned.
+
 ## Installation
 
 1. [Download the code](https://github.com/hingobway/anonbot/archive/master.zip) or clone the repository.
