@@ -34,7 +34,7 @@ You're done! In this mode, the bot will go offline as soon as you close that ter
 ## Flaws and Recommendations
 
 - AnonBot can currently only send text messages. **No images** yet, but **links and formatting** will go through.
-- Currently the only way to un-blacklist someone is manually. To do this, [figure out their ID](https://discordapp.com/oauth2/authorize?client_id=318830952669249538&scope=bot&permissions=125952) and then find and remove that ID from the `blacklist.txt` file.
+- Currently the only way to un-blacklist someone is manually. To do this, [figure out their ID](https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode) and then find and remove that ID from the `blacklist.txt` file.
 - Setting targets is still very confusing, and may be difficult for some users to do. Simply tell them to paste the target from their response message. **You also may want to pin the target for each channel to make it easier for people.**
 - The way node functions automatically, you can't have programs running in the background very easily. Fortunately, there are ways around this. Below is my favorite.
   1. Open terminal in the source folder, and type the following command:
