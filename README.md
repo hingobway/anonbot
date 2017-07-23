@@ -12,7 +12,7 @@ Anonbot has no visible logs of messages and authors--it's anonymous. But, there 
 
 1. Make sure you have [developer mode enabled](https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode).
 2. Right click the problematic message, and click "Copy ID".
-3. In your anonbot DMs, type `;blist [the user's ID]`. (Don't include brackets.)
+3. In your anonbot DMs, type `;blist [the copied ID]`. (Don't include brackets.)
 4. Anonbot will prevent that user from being able to use anonbot anymore. See [below](#flaws-and-recommendations) for how to un-blacklist someone.
 
 ## Installation
