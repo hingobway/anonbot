@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title3</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="anonbot">anonbot</h1>
+
+<p>A Discord bot facilitating anonymous messages.</p>
+
+
+
+<h2 id="how-it-works">How it Works</h2>
+
+<ol>
+<li>Users type <code>;anon</code> in a channel. They get a message giving a target for that channel, as well as a DM with instructions.</li>
+<li>Users either paste the target from the server message, or follow the instructions in their DMs to set one themselves.</li>
+<li>Users type messages in their DM with anonbot, and anonbot posts those messages anonymously in the target channel.</li>
+</ol>
+
+
+
+<h2 id="admins">Admins</h2>
+
+<p>Anonbot has no visible logs of messages and authors–it’s anonymous. But, there is a way to keep people on track. Here’s what to do if you see an anonbot message that’s problematic (you have to be listed as an anonbot mod in the config.ini file first):</p>
+
+<ol>
+<li>Make sure you have <a href="https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode">developer mode enabled</a>.</li>
+<li>Right click the problematic message, and click “Copy ID”.</li>
+<li>In your anonbot DMs, type <code>;blist [the copied ID]</code>. (Don’t include brackets.)</li>
+<li>Anonbot will prevent that user from being able to use anonbot anymore. See <a href="#flaws-and-recommendations">below</a> for how to un-blacklist someone.</li>
+</ol>
+
+
+
+<h2 id="installation">Installation</h2>
+
+<ol>
+<li><a href="https://github.com/hingobway/anonbot/archive/master.zip">Download the code</a> or clone the repository.</li>
+<li>Install <a href="https://nodejs.org/en/download">node.js</a> on your computer.</li>
+<li><p>Open a terminal window in the folder where you put the source, and type the following command:</p>
+
+<p>npm install</p></li>
+<li><a href="https://discordapp.com/developers/applications/me">Go here</a> and create a new Bot User.</li>
+<li>Duplicate <code>config.tmp.ini</code> and rename the duplicate <code>config.ini</code>.</li>
+<li>Open <code>config.ini</code> and paste your token, as well as the IDs for any mods you’d like to have.</li>
+<li><p>In terminal, type the following:</p>
+
+<p>node .</p></li>
+</ol>
+
+<p>You’re done! In this mode, the bot will go offline as soon as you close that terminal window. See the next section for a workaround.</p>
+
+
+
+<h2 id="flaws-and-recommendations">Flaws and Recommendations</h2>
+
+<ul>
+<li>AnonBot can currently only send text messages. <strong>No images</strong> yet, but <strong>links and formatting</strong> will go through.</li>
+<li>Currently the only way to un-blacklist someone is manually. To do this, <a href="https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode">figure out their ID</a> and then find and remove that ID from the <code>blacklist.txt</code> file.</li>
+<li>Setting targets is still very confusing, and may be difficult for some users to do. Simply tell them to paste the target from their response message. <strong>You also may want to pin the target for each channel to make it easier for people.</strong></li>
+<li><p>The way node functions automatically, you can’t have programs running in the background very easily. Fortunately, there are ways around this. Below is my favorite.</p>
+
+<ol><li><p>Open terminal in the source folder, and type the following command:</p>
+
+<p>npm install -g pm2</p></li>
+<li><p>Make sure you’re still in the folder, and that you aren’t running the bot in another window. Then, run the following command:</p>
+
+<p>pm2 start index.js –name=”anonbot” <br>
+Unfortunately, you’ll still have to run this every time your computer restarts. There is a way around this as well, but it’s a little in-depth for this. <a href="http://npm.im/pm2-windows-startup">Click here</a> for more info.</p></li>
+<li>The bot should now be running in the background. Here are a few useful commands now that you know that:</li></ol></li>
+</ul>
+
+<p>To view the bot logs:</p>
+
+<pre><code>pm2 logs anonbot
+</code></pre>
+
+<p>To restart the bot:</p>
+
+<pre><code>pm2 restart anonbot
+</code></pre>
+
+<p><a href="https://github.com/hingobway/anonbot/issues/new">Questions, requests, or problems?</a></p></div></body>
+</html>
