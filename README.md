@@ -7,6 +7,14 @@ A Discord bot facilitating anonymous messages.
 2. Users either paste the target from the server message, or follow the instructions in their DMs to set one themselves.
 3. Users type messages in their DM with anonbot, and anonbot posts those messages anonymously in the target channel.
 
+## Admins
+Anonbot has no visible logs of messages and authors--it's anonymous. But, there is a way to keep people on track. Here's what to do if you see an anonbot message that's problematic (you have to be listed as an anonbot mod in the config.ini file first):
+
+1. Make sure you have [developer mode enabled](https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode).
+2. Right click the problematic message, and click "Copy ID".
+3. In your anonbot DMs, type `;blist [the copied ID]`. (Don't include brackets.)
+4. Anonbot will prevent that user from being able to use anonbot anymore. See [below](#flaws-and-recommendations) for how to un-blacklist someone.
+
 ## Installation
 
 1. [Download the code](https://github.com/hingobway/anonbot/archive/master.zip) or clone the repository.
@@ -26,6 +34,7 @@ You're done! In this mode, the bot will go offline as soon as you close that ter
 ## Flaws and Recommendations
 
 - AnonBot can currently only send text messages. **No images** yet, but **links and formatting** will go through.
+- Currently the only way to un-blacklist someone is manually. To do this, [figure out their ID](https://github.com/hingobway/coolbot/wiki/Enabling-Developer-Mode) and then find and remove that ID from the `blacklist.txt` file.
 - Setting targets is still very confusing, and may be difficult for some users to do. Simply tell them to paste the target from their response message. **You also may want to pin the target for each channel to make it easier for people.**
 - The way node functions automatically, you can't have programs running in the background very easily. Fortunately, there are ways around this. Below is my favorite.
   1. Open terminal in the source folder, and type the following command:
